@@ -49,7 +49,7 @@ var app = {
         if (device.platform == 'android' || device.platform == 'Android') {
             alert("Register called " + device.platform);
             //tu Project ID aca!!
-            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"estetica-club-1172867","ecb":"this.onNotificationGCM"});
+            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"estetica-club-1172867","ecb":"app.onNotificationGCM"});
         } else {
             alert("Register called");
             pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
