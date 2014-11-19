@@ -49,10 +49,10 @@ var app = {
         if (device.platform == 'android' || device.platform == 'Android') {
             alert("Register called " + device.platform);
             //tu Project ID aca!!
-            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"estetica-club-1172867","ecb":"app.onNotificationGCM"});
+            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"estetica-club-1172867","ecb":"onNotificationGCM"});
         } else {
             alert("Register called");
-            pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
+            pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
         }
     },
     // result contains any message sent from the plugin call
@@ -91,7 +91,6 @@ var app = {
         }
     },
     onNotificationAPN: function(event) {
-		alert ('onNotificationAPN');
         var pushNotification = window.plugins.pushNotification;
         alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
         
