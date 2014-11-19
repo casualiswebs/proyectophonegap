@@ -50,8 +50,7 @@ var app = {
             alert("Register called");
             //tu Project ID aca!!
             pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"estetica-club-1172867","ecb":"app.onNotificationGCM"});
-        }
-        else {
+        } else {
             alert("Register called");
             pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
         }

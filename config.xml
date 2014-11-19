@@ -45,5 +45,8 @@
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <!--Plugin de notificaciones -->
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
+	<feature name="PushPlugin">
+  <param name="android-package" value="com.plugin.gcm.PushPlugin" />
+</feature>
     <access origin="*" />
 </widget>
